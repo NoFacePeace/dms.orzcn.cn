@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>药品库存管理系统</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/jquery.spinner.css"> -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <br>
+          <form class="form-inline">
+            <div class="form-group">
+              <label>&nbsp;&nbsp;编号</label>
+              <input type="text" name="number">
+            </div>
+            &nbsp;&nbsp;
+            <div class="form-group">
+              <label>药品名</label>
+              <input type="text" name="name">
+            </div>
+            &nbsp;&nbsp;
+            <button type="submit" class="btn btn-success">查找</button>
+          </form>
+          <br>
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>药品名</th>
+                <th>单价</th>
+                <th>有效期</th>
+                <th>生产日期</th>
+                <th>库存量</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>
+                  <a href="detail.html" target=""><button type="button" class="btn btn-info">详情</button></a>
+                  
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal3">修改</button>
+                  <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modal1">入库</button>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">出库</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal fade" tabindex="-1" role="dialog" id="modal3">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">修改</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label class="col-sm-2">编号</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-group">
+                      <label for="" class="col-sm-2">药品名</label>  
+                      <input type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2">单价</label>
+                      <input type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2">有效期</label>
+                      <input type="number" name="" value="0" placeholder="">
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2">生产日期</label>
+                      <input type="text">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+          <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal1">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <label>数量</label>
+                      <input type="number" name="" value="0" placeholder="" min="0">
+                    </div>
+                    <button type="submit" data-dismiss="modal" aria-label="Close">入库</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="modal2">
+            <div class="modal-dialog modal-sm" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <label>数量</label>
+                      <input type="number" name="" value="" placeholder="0" min="0">
+                    </div>
+                    <button type="submit" data-dismiss="modal" aria-label="Close">出库</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav> 
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/jquery.spinner.js"></script>
+    
+  </body>
+</html>
